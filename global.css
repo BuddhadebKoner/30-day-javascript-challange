@@ -1,0 +1,153 @@
+body {
+   background-color: #121212;
+   color: #e0e0e0;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+}
+
+h1 {
+   color: #ffffff;
+   margin-bottom: 20px;
+}
+
+.card {
+   background-color: #1e1e1e;
+   border: 1px solid #333;
+   border-radius: 10px;
+   padding: 20px;
+   margin: 20px;
+   width: 300px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+.card h2 {
+   margin-top: 0;
+   color: #ffffff;
+}
+
+.card p,
+.card div {
+   margin: 10px 0;
+}
+
+.card button,
+.card input,
+.card select {
+   background-color: #333;
+   border: none;
+   border-radius: 5px;
+   color: #e0e0e0;
+   padding: 10px;
+   margin: 5px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.card button:hover,
+.card input:hover,
+.card select:hover {
+   background-color: #444;
+}
+
+.card img {
+   border: 2px solid #444;
+   border-radius: 5px;
+   max-width: 100%;
+   height: auto;
+   margin: 10px 0;
+}
+
+.card ul {
+   list-style: none;
+   padding: 0;
+   margin: 10px 0;
+   background-color: #222;
+   border-radius: 5px;
+   width: 100%;
+   max-width: 200px;
+   border: 1px solid #444;
+}
+
+.card li {
+   padding: 10px;
+   border-bottom: 1px solid #444;
+}
+
+.card li:last-child {
+   border-bottom: none;
+}
+
+.card li:hover {
+   background-color: #333;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   max-width: 300px;
+}
+
+form input,
+form button {
+   margin: 5px 0;
+}
+
+select {
+   width: 100%;
+   max-width: 200px;
+   background-color: #333;
+   border: none;
+   color: #e0e0e0;
+   padding: 10px;
+}
+
+select:hover {
+   background-color: #444;
+}
+
+.hover-element,
+.example-class,
+.toggle-class {
+   width: 100%;
+   max-width: 200px;
+   height: 100px;
+   border: 1px solid #444;
+   border-radius: 5px;
+   background-color: #333;
+   color: #e0e0e0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   margin: 10px 0;
+}
+
+.attribute-modify,
+.mouseover-event {
+   background-color: #333;
+   color: #e0e0e0;
+   padding: 10px;
+   border: 1px solid #444;
+   border-radius: 5px;
+   width: 100%;
+   max-width: 300px;
+   text-align: center;
+}
+
+.attribute-modify:hover,
+.mouseover-event:hover {
+   background-color: #444;
+}
