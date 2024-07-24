@@ -3,60 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Tasks</title>
+    <title>Day 09</title>
     <style>
-        .example-class {
-            width: 100px;
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .card p, .card div {
+            margin: 10px 0;
+        }
+
+        .card button {
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            color: #e0e0e0;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #444;
+        }
+
+        .card img {
+            border: 2px solid #444;
+            border-radius: 5px;
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            background-color: #222;
+            border-radius: 5px;
+            width: 100%;
+            border: 1px solid #444;
+        }
+
+        .card li {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .card li:hover {
+            background-color: #333;
+        }
+
+        .hover-element, .example-class, .toggle-class {
+            width: 100%;
+            max-width: 200px;
             height: 100px;
-            background-color: lightgray;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #333;
+            color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 10px 0;
         }
-        .parent-class {
-            border: 1px solid black;
+
+        .attribute-modify, .mouseover-event {
+            background-color: #333;
+            color: #e0e0e0;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
         }
-        .new-class {
-            font-weight: bold;
-        }
-        .hover-element {
-            width: 100px;
-            height: 100px;
-            border: 1px solid black;
+
+        .attribute-modify:hover, .mouseover-event:hover {
+            background-color: #444;
         }
     </style>
 </head>
 <body>
-    <!-- Activity 1 -->
-    <h2 id="example-id">Original Text</h2>
-    <div class="example-class">Change my color</div>
+    <h1>JavaScript Tasks</h1>
 
-    <!-- Activity 2 -->
-    <ul>
-        <li>Existing list item 1</li>
-        <li>Existing list item 2</li>
-    </ul>
-
-    <!-- Activity 3 -->
-    <div id="remove-this">Remove this element</div>
-    <div class="parent-class">
-        <div>Child 1</div>
-        <div>Child 2</div>
+    <div class="card">
+        <h2>Activity 1</h2>
+        <button id="text-button">Change Paragraph Text</button>
+        <p id="text-paragraph">Original text.</p>
+        <div class="example-class">Change my color</div>
     </div>
 
-    <!-- Activity 4 -->
-    <img src="old-image-src.jpg" alt="Image">
-    <div class="toggle-class">Toggle my class</div>
+    <div class="card">
+        <h2>Activity 2</h2>
+        <ul>
+            <li>Existing list item 1</li>
+            <li>Existing list item 2</li>
+        </ul>
+    </div>
 
-    <!-- Activity 5 -->
-    <button>Click me</button>
-    <p>Original paragraph text</p>
-    <div class="hover-element">Hover over me</div>
+    <div class="card">
+        <h2>Activity 3</h2>
+        <div id="remove-this">Remove this element</div>
+        <div class="parent-class">
+            <div>Child 1</div>
+            <div>Child 2</div>
+        </div>
+    </div>
 
-    <!-- Feature Request -->
-    <h2 id="text-manipulate">Original Text Content</h2>
-    <div id="remove-element">This element will be removed</div>
-    <div class="attribute-modify" title="Old title">Hover over this element</div>
-    <button class="click-event">Click Event Button</button>
-    <div class="mouseover-event">Mouseover Event Element</div>
+    <div class="card">
+        <h2>Activity 4</h2>
+        <img src="old-image-src.jpg" alt="Image">
+        <div class="toggle-class">Toggle my class</div>
+    </div>
 
-   <script src="./sometime_fun.js"></script>
+    <div class="card">
+        <h2>Activity 5</h2>
+        <button>Click me</button>
+        <p>Original paragraph text</p>
+        <div class="hover-element">Hover over me</div>
+    </div>
+
+    <div class="card">
+        <h2>Feature Request</h2>
+        <div id="text-manipulate">Original Text Content</div>
+        <div id="remove-element">This element will be removed</div>
+        <div class="attribute-modify" title="Old title">Hover over this element</div>
+        <button class="click-event">Click Event Button</button>
+        <div class="mouseover-event">Mouseover Event Element</div>
+    </div>
+
+    <script src="./sometime_fun.js"></script>
 </body>
 </html>
