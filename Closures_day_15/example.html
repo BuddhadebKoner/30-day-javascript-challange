@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Closures</title>
+</head>
+
+<body>
+   <button type="button" id="Green">Green</button>
+   <button type="button" id="Orange">Orange</button>
+</body>
+<script>
+   // example
+   function createCounter() {
+      let count = 0;
+
+      function counter() {
+         count += 1;
+      }
+
+      return counter;
+   }
+
+   const counter = createCounter();
+
+   console.log(counter());
+   console.log(counter());
+   console.log(counter());
+</script>
+<script>
+   // document.getElementById('Green').onclick = function() {
+   //    document.body.style.backgroundColor = 'green';
+   // }
+   // document.getElementById('Orange').onclick = function() {
+   //    document.body.style.backgroundColor = 'Orange';
+   // }
+
+   // closure concept
+   function HandelColor(color) {
+      return function () {
+         document.body.style.backgroundColor = `${color}`;
+      }
+   }
+
+   document.getElementById('Green').onclick = HandelColor('green');
+   document.getElementById('Orange').onclick = HandelColor('Orange');
+</script>
+
+</html>
