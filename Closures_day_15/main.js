@@ -129,5 +129,60 @@ const totalList = outerFunc3();
 // totalList.listItems();
 
 // Activity 5: Memoization
-// Write a function that memoizes the results of another function. Use a closure to store the results of previous computations.
+// task 7
 
+function squre(num) {
+   return num * num;
+}
+
+function memoizes1(fnc) {
+   const cache = {}
+
+   return function (num) {
+      if (num in cache) {
+         console.log("Returning cashe result : ", num);
+         return cache[num];
+      }
+
+      const result = fnc(num)
+      cache[num] = result;
+      console.log("Computing Result For : ", num);
+      return result;
+   }
+}
+
+const memoizedSquare = memoizes1(squre);
+// console.log(memoizedSquare(5));
+// console.log(memoizedSquare(5));
+// console.log(memoizedSquare(10));
+
+// taskk 8
+
+function factorial(n) {
+   if (n === 0) {
+      return 1;
+   }
+   return n * factorial(n - 1);
+}
+
+function memoizes2(fnc) {
+   const cache = {}
+
+   return function (num) {
+      if (num in cache) {
+         console.log("Returning Result From cache : ", num);
+         return cache[num];
+      }
+
+      const result = fnc(num)
+      cache[num] = result;
+      console.log("Calculating Factorial : ", num);
+      return result;
+   }
+}
+
+const memoizes2Factorial = memoizes2(factorial);
+
+// console.log(memoizes2Factorial(5));
+// console.log(memoizes2Factorial(5));
+// console.log(memoizes2Factorial(10));
