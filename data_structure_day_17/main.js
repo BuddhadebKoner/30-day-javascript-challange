@@ -288,60 +288,61 @@ node5.right = node8;
 
 // task 8
 class BinaryTree {
-  constructor() {
-    this.root = null;
-  }
+   constructor() {
+      this.root = null;
+   }
 
-  insert(value) {
-    const newNode = new TreeNode(value);
-    if (this.root === null) {
-      this.root = newNode;
-    } else {
-      this._insertRecursively(this.root, newNode);
-    }
-  }
-
-  _insertRecursively(currentNode, newNode) {
-    if (newNode.value < currentNode.value) {
-      // Insert into the left subtree
-      if (currentNode.left === null) {
-        currentNode.left = newNode;
+   insert(value) {
+      const newNode = new TreeNode(value);
+      if (this.root === null) {
+         this.root = newNode;
       } else {
-        this._insertRecursively(currentNode.left, newNode);
+         this._insertRecursively(this.root, newNode);
       }
-    } else {
-      if (currentNode.right === null) {
-        currentNode.right = newNode;
+   }
+
+   _insertRecursively(currentNode, newNode) {
+      if (newNode.value < currentNode.value) {
+         // Insert into the left subtree
+         if (currentNode.left === null) {
+            currentNode.left = newNode;
+         } else {
+            this._insertRecursively(currentNode.left, newNode);
+         }
       } else {
-        this._insertRecursively(currentNode.right, newNode);
+         if (currentNode.right === null) {
+            currentNode.right = newNode;
+         } else {
+            this._insertRecursively(currentNode.right, newNode);
+         }
       }
-    }
-  }
+   }
 
-  inOrderTraversal() {
-    const result = [];
-    this._inOrderTraversalRecursively(this.root, result);
-    return result;
-  }
+   inOrderTraversal() {
+      const result = [];
+      this._inOrderTraversalRecursively(this.root, result);
+      return result;
+   }
 
-  _inOrderTraversalRecursively(node, result) {
-    if (node !== null) {
-      this._inOrderTraversalRecursively(node.left, result);
-      result.push(node.value);
-      this._inOrderTraversalRecursively(node.right, result);
-    }
-  }
+   _inOrderTraversalRecursively(node, result) {
+      if (node !== null) {
+         this._inOrderTraversalRecursively(node.left, result);
+         result.push(node.value);
+         this._inOrderTraversalRecursively(node.right, result);
+      }
+   }
 }
 
 // Example usage:
+
 // const tree = new BinaryTree();
-// tree.insert(5);
-// tree.insert(3);
-// tree.insert(7);
-// tree.insert(2);
-// tree.insert(4);
-// tree.insert(6);
-// tree.insert(8);
+// tree.insert(50);
+// tree.insert(30);
+// tree.insert(70);
+// tree.insert(20);
+// tree.insert(40);
+// tree.insert(60);
+// tree.insert(80);
 
 // console.log('In-order traversal:', tree.inOrderTraversal());
 
